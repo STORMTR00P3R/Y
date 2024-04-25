@@ -17,6 +17,8 @@
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <% if user_signed_in? %>
                         <%= current_user.username %>
+                    <% else%>  
+                        User
                     <% end%>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-lg-end">
