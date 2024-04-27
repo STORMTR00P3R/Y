@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Tweets</h1>
+
+<% if user_signed_in? %>
+  <%= link_to new_tweet_path, class: "btn btn-primary btn-rounded float-end" do %>
+    <i class="bi bi-pencil-square"></i>
+  <% end %>
+<% end %>
+
+<br>
+
+<div class="container my-4">
+  <div id="tweets">
+    <% @tweets.each do |tweet| %>
+      <%= link_to tweet, class: 'tweet' do %>
+        <%= render tweet %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
